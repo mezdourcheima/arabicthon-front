@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/navbar';
+import Azrar from './components/azrar';
 
 function App() {
   return (
@@ -7,12 +8,10 @@ function App() {
       <div>
       {/* Include the Navbar component */}
       <Navbar />
+      <Azrar />
 
-      {/* The rest of your application content goes here */}
-      <div>
-        {/* Your other components, pages, etc. */}
-        <h1>Welcome to My App!</h1>
-      </div>
+      
+     
     </div>
     </div>
   );

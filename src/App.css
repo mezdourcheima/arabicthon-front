@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.random-topics-wrapper {
+  width: 1426px;
+  height: 793px;
+  top: 56px;
+  left: 5px;
+  padding: 20px; /* Add padding for better readability */
+}
+
+.random-topics-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.random-topics-wrapper a {
+  text-decoration: none;
+  margin: 5px;
+  padding: 10px;
+  background-color: #B2CAC6;
+  color: #078567;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  display: block;
+  text-align: center;
+}

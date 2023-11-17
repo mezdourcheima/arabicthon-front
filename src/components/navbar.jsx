@@ -1,34 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+
   const linkStyle = {
     fontFamily: 'Tajawal',
     fontWeight: 700,
-    color: '#078567',
+    color: '#FFFFFF',
     fontSize: '18px',
     lineHeight: '21.6px',
     textAlign: 'center',
     textDecoration: 'none',
+    borderBottom: selectedItem === null ? 'none' : '2px solid transparent', // Initial state or when nothing is selected
   };
 
   const listItemStyle = {
-    padding: '21px 47px', // Equal padding on top and bottom, adjusted margin for horizontal spacing
+    padding: '21px 47px',
     display: 'flex',
-    alignItems: 'center', // Vertical centering
+    alignItems: 'center',
+    cursor: 'pointer',
+  };
+
+  const navItems = [
+    { label: 'تواصل معنا', link: '/contact-us' },
+    { label: 'استطلاع', link: '/polls' },
+    { label: 'كن متميزا', link: '/become-outstanding' },
+    { label: 'كلمة اليوم', link: '/word-of-the-day' },
+    { label: 'عن صلة', link: '/about' },
+    { label: 'الرئيسية', link: '/' },
+  ];
+
+  const handleItemClick = (index) => {
+    setSelectedItem(index);
   };
 
   return (
-    <nav style={{ backgroundColor: '#B2CAC6', padding: '10px', height: '64px' }}>
+    <nav style={{ backgroundColor: '#61B8A3', padding: 0, height: '64px', width: '100%' }}>
       <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'center', margin: 0, padding: 0 }}>
-        <li style={listItemStyle}><a href="/contact-us" style={linkStyle}>تواصل معنا</a></li>
-        <li style={listItemStyle}><a href="/polls" style={linkStyle}>استطلاع</a></li>
-        <li style={listItemStyle}><a href="/become-outstanding" style={linkStyle}>كن متميزا</a></li>
-        <li style={listItemStyle}><a href="/word-of-the-day" style={linkStyle}>كلمة اليوم</a></li>
-        <li style={listItemStyle}><a href="/about" style={linkStyle}>عن صلة</a></li>
-        <li style={listItemStyle}><a href="/" style={linkStyle}>الرئيسية</a></li>
+        {navItems.map((item, index) => (
+          <li key={index} style={listItemStyle} onClick={() => handleItemClick(index)}>
+            <a href={item.link} style={{ ...linkStyle, borderBottom: selectedItem === index ? '2px solid #FFFFFF' : linkStyle.borderBottom }}>
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

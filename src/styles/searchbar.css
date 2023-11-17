@@ -1,0 +1,39 @@
+.search-container {
+    width: 493px;
+    height: 65px;
+    top: 372px;
+    left: 473px;
+    padding: 15px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FFFFFF;
+  }
+  
+  
+  .search-input {
+    width: 100%;
+    font-family: 'Almarai', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.08em;
+    text-align: right;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  .search-icon {
+    width: 34px;
+    height: 34px;
+    padding: 4.25px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #049C7899;
+  }
+
+  .search-input::placeholder {
+    color: #049C7899;  }
+  
