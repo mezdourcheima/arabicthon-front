@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/navbar';
 import Azrar from './components/azrar';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* Include the Navbar component */}
       <Navbar />
       <Azrar />
+      <Footer />
 
       
      
