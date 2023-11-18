@@ -5,7 +5,7 @@ const KounMoutamizan = () => {
   const containerStyle = {
     padding: 0,
     width: '100vw',
-    height: '100vh',
+    height: '70vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
