@@ -4,11 +4,3 @@
     font-weight: 300;
     font-style: normal;
   }
-
-@font {
-    font-family: 'GE Jarida';
-    src: url('../../public/fonts/GE-Jarida-Heavy_23.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-}
-  
