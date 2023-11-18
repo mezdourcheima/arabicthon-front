@@ -49,7 +49,7 @@ const SilatAlyawm = () => {
     color: '#474747',
     position: 'absolute',
     top: '-55px',
-    right: '10px',
+    right: '30px',
     direction: 'rtl',
   };
   

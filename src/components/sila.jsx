@@ -1,5 +1,6 @@
 import React from 'react';
 import SilatAlyawm from './silat_alyawm';
+import KounMoutamizan from './koun_moutamayizan';
 
 
 const Silat = () => {
@@ -63,6 +64,7 @@ const Silat = () => {
         ))}
       </div>
      <SilatAlyawm/>
+
     </div>
   );
 };
