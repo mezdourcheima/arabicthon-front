@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Silat = () => {
+const Sila = () => {
   const containerStyle = {
     backgroundImage: 'url("/pics/bg_pic2.png")',
     backgroundSize: 'cover',
@@ -68,4 +68,4 @@ const Silat = () => {
   );
 };
 
-export default Silat;
+export default Sila;
