@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={{ backgroundColor: '#61B8A3', padding: 0, height: '64px', width: '100%' }}>
+    <nav style={{ backgroundColor: '#61B8A3', padding: 0, height: '64px',     width: '100vw', }}>
       <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'center', margin: 0, padding: 0 }}>
         {navItems.map((item, index) => (
           <li key={index} style={listItemStyle} onClick={() => handleItemClick(index)}>

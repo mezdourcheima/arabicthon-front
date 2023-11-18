@@ -2,11 +2,12 @@ import React from 'react';
 
 const Footer = () => {
   const footerStyle = {
-    width: '1440px',
     height: '300.03px',
     backgroundImage: 'url("/pics/footer.png")',
     color: '#FFFFFF',
     position: 'relative',
+    width: '100vw', // Set the width to 100% of the viewport width
+
   };
 
   const textContainerStyle = {
@@ -18,7 +19,7 @@ const Footer = () => {
     alignItems: 'flex-end', // Align items to the right
     justifyContent: 'space-between', // Add space between the items
     paddingRight: '280px', // Add some padding to separate text from the line
-    paddingTop: '95px',
+    paddingTop: '90px',
   };
 
   const lineStyle = {
@@ -26,7 +27,7 @@ const Footer = () => {
     height: '40%', // Adjust the height of the line
     backgroundColor: '#FFFFFF',
     position: 'absolute',
-    top: '20%', // Adjust the top positioning
+    top: '25%', // Adjust the top positioning
     right: '250px', // Adjust the right positioning to be next to the text
   };
 
