@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import Azrar from './components/azrar';
 import Footer from './components/footer';
-import Silat from './components/silat'
+import Silat from './components/sila'
 
 function App() {
   return (
