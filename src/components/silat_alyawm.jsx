@@ -78,6 +78,9 @@ const SilatAlyawm = () => {
 
   };
   const buttonStyle = {
+    border: 'none',
+    fontFamily:'Tajawal-Regular',
+    fontSize:'18px',
     width: '233px',
     height: '46px',
     padding: '15px 16px',
@@ -89,7 +92,7 @@ const SilatAlyawm = () => {
     lineHeight: '22px',
     letterSpacing: '0em',
     textAlign: 'center',
-    backgroundImage: 'linear-gradient(180deg, #049C78 0%, #078567 100%)', // Added gradient background
+    backgroundImage: 'linear-gradient(to bottom, #049C78, #078568)', // Added gradient background
     color: '#FFFFFF',
     top: '85%', // Adjusted top position to center vertically
     left: '50%', // Adjusted left position to center horizontally

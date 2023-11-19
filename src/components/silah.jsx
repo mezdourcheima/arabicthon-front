@@ -3,7 +3,7 @@ import SilatAlyawm from './silat_alyawm';
 import KounMoutamizan from './koun_moutamayizan';
 
 
-const Silat = () => {
+const Silah = () => {
   const containerStyle = {
     padding: 0,
     width: '100vw',
@@ -69,4 +69,4 @@ const Silat = () => {
   );
 };
 
-export default Silat;
+export default Silah;
