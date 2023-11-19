@@ -11,8 +11,12 @@ function App() {
   return (
     <div className="App">
       <div>
-         <Quiz/>
-     
+         <Navbar/>
+         <Azrar/>
+         <Silah/>
+         <KounMoutamizan/>
+         <Footer  />
+
     </div>
     </div>
   );

@@ -1,4 +1,7 @@
 import React from 'react';
+import Youtube from '../icons/Vector.svg';
+import linkedin from '../icons/linkedin-original.svg';
+import Logo from '../icons/Group15.svg';
 
 const Footer = () => {
   const footerStyle = {
@@ -7,7 +10,11 @@ const Footer = () => {
     color: '#FFFFFF',
     position: 'relative',
     width: '100vw', // Set the width to 100% of the viewport width
-
+    display: 'flex', // Use flexbox to arrange items horizontally
+    alignItems: 'center', // Align items vertically in the center
+    justifyContent: 'space-between', // Add space between the items
+    backgroundSize: 'auto', // Preserve the original dimensions of the background image
+    backgroundPosition: 'center', // Center the background image
   };
 
   const textContainerStyle = {
@@ -17,29 +24,28 @@ const Footer = () => {
     display: 'flex',
     flexDirection: 'column', // Align items vertically
     alignItems: 'flex-end', // Align items to the right
-    justifyContent: 'space-between', // Add space between the items
-    paddingRight: '280px', // Add some padding to separate text from the line
-    paddingTop: '90px',
+    gap: '10px', // Add space between text items
+  };
+
+  const iconsContainerStyle = {
+    display: 'flex',
+    flexDirection: 'row', // Align items horizontally
+    gap: '10px', // Adjust the gap between the icons
+    paddingLeft: '200px', // Adjust the padding to move the icons to the left
+  };
+  const logoStyle = {
+    marginRight: '100px', // Adjust the margin to separate the logo from the line
   };
 
   const lineStyle = {
     width: '2px',
     height: '40%', // Adjust the height of the line
     backgroundColor: '#FFFFFF',
-    position: 'absolute',
-    top: '25%', // Adjust the top positioning
-    right: '250px', // Adjust the right positioning to be next to the text
   };
 
   const rightsText = 'رقم الإصدار 2.0 - الحقوق محفوظة – مجمع الملك سلمان العالمي للغة العربية © 2023';
 
-  const navItems = [
-    'تواصل معنا',
-    'استطلاع',
-    'كن متميزا',
-    'كلمة اليوم',
-    'عن صلة',
-  ];
+  const navItems = ['تواصل معنا', 'استطلاع', 'كن متميزا', 'كلمة اليوم', 'عن صلة'];
 
   const navItemsStyle = {
     listStyle: 'none',
@@ -52,6 +58,10 @@ const Footer = () => {
 
   return (
     <footer style={footerStyle}>
+      <div style={iconsContainerStyle}>
+        <img src={linkedin} alt="linkedin" />
+        <img src={Youtube} alt="Youtube" />
+      </div>
       <div style={textContainerStyle}>
         <ul style={navItemsStyle}>
           {navItems.map((item, index) => (
@@ -61,6 +71,10 @@ const Footer = () => {
         <p>{rightsText}</p>
       </div>
       <div style={lineStyle}></div>
+      <div>
+          <img src={Logo} alt="Your Logo" style={logoStyle} />
+       
+      </div>
     </footer>
   );
 };

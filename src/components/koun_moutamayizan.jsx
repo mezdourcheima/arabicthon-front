@@ -1,5 +1,6 @@
 import React from 'react';
 import subscriptionImage from '../pics/Group-2.svg';
+import frameIcon from '../icons/Frame.svg'; 
 
 const KounMoutamizan = () => {
   const containerStyle = {
@@ -36,7 +37,7 @@ const KounMoutamizan = () => {
     letterSpacing: '0em',
     textAlign: 'right',
     color: 'rgba(0, 0, 0, 1)',
-    marginTop: '40px',
+    marginTop: '4px',
     marginRight: '100px',
     marginLeft: '250px', // Adjusted to move text closer to the image
     direction: 'rtl',
@@ -77,20 +78,27 @@ const KounMoutamizan = () => {
 
 
   const buttonStyle = {
-    fontFamily: 'Almarai',
+    border: 'none',
+    fontFamily: 'Tajawal',
     fontSize: '16px',
     fontWeight: '700',
     lineHeight: '18px',
     letterSpacing: '0em',
     textAlign: 'center',
     padding: '10px 20px',
-    backgroundColor: 'rgba(101, 192, 170, 1)',
+    backgroundImage: 'linear-gradient(to bottom, #049C78, #078568)', // Added gradient background
     color: '#FFFFFF',
     borderRadius: '8px',
     cursor: 'pointer',
 
 
   };
+
+  const frameIconStyle = {
+    marginBottom: '1px', // Adjust the margin as needed
+    marginLeft: '570px', // Adjust the margin as needed
+  };
+  
   const handleButtonClick = () => {
     // Handle the click event for the button here
     alert('Button Clicked!');
@@ -105,6 +113,7 @@ const KounMoutamizan = () => {
             <button style={buttonStyle} onClick={handleButtonClick}>اشترك الآن</button>
         </div>
         <div>
+        <img src={frameIcon} alt="Frame Icon" style={frameIconStyle} />
           <p style={secondaryTextStyle}>
             خدمة <span style={vipTextStyle}>VIP</span> الخاصة بنا تمنحك تجربة استثنائية! تميّز و اجعل تفاعلك مع
             اللغة العربية أكثر سهولة وإثراءً، حيث يُتاح لك رفع صورة نصية واستخراج العلاقات بين الكلمات بكل سهولة.
