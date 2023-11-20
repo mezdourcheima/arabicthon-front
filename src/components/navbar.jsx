@@ -22,9 +22,9 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: 'تواصل معنا', link: '/contact-us' },
-    { label: 'استطلاع', link: '/polls' },
-    { label: 'كن متميزا', link: '/become-outstanding' },
+    { label: 'تواصل معنا', link: '/تواصل معنا' },
+    { label: 'استطلاع', link: '/استطلاع' },
+    { label: 'كن متميزا', link: '/كن متميزا' },
     { label: 'كلمة اليوم', link: '/word-of-the-day' },
     { label: 'عن صلة', link: '/about' },
     { label: 'الرئيسية', link: '/' },

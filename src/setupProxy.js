@@ -1,13 +1,13 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-module.exports = function (app) {
+module.exports = function(app) {
   app.use(
-    '/api',  // Specify the base path you want to proxy
+    '/api',
     createProxyMiddleware({
-      target: 'https://siwar.ksaa.gov.sa',  // Specify the target API server
+      target: 'https://siwar.ksaa.gov.sa',
       changeOrigin: true,
       pathRewrite: {
-        '^/api': '',  // Remove the '/api' prefix when forwarding the request
+        '^/api': '/api',
       },
     })
   );

@@ -72,7 +72,7 @@ const Footer = () => {
       </div>
       <div style={lineStyle}></div>
       <div>
-          <img src={Logo} alt="Your Logo" style={logoStyle} />
+          <img src={Logo} alt="Logo" style={logoStyle} />
        
       </div>
     </footer>

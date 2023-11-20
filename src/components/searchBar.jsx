@@ -1,3 +1,5 @@
+// SearchBar.jsx
+
 import React, { useState } from 'react';
 import { Search } from 'react-feather';
 import axios from 'axios';
@@ -11,17 +13,12 @@ const SearchBar = () => {
 
   const api = "fee6626b-fc57-443d-a838-60d0de172316";
 
-  const headers = {
-    'accept': 'application/json',
-    'apikey': api
-  };
-
   async function getSynonyms(ID) {
     const url = 'https://siwar.ksaa.gov.sa/api/alriyadh/find/entries/by/senses/ids';
     const data = { "ids": [ID] };
 
     try {
-      const response = await axios.patch(url, data, { headers });
+      const response = await axios.patch(url, data, { headers: { 'apikey': api } });
       const lemmaForms = response.data.map(item => item.lemma.formRepresentations[0].form);
       return lemmaForms;
     } catch (error) {
@@ -46,14 +43,19 @@ const SearchBar = () => {
   }
 
   async function searchWord(word) {
-    const url = 'https://siwar.ksaa.gov.sa/api/alriyadh/search';
-    const params = { 'query': word };
+    const url = `https://siwar.ksaa.gov.sa/api/alriyadh/search?query=${word}`;
 
     try {
-      const response = await axios.get(url, { headers, params });
+      const response = await axios.get(url, {
+        headers: {
+          'accept': 'application/json',
+          'apikey': api
+        },
+        withCredentials: true,
+      });
+
       const data = funRequest(response);
 
-      // Initialize an array to store definitions
       const definitions = [];
 
       for (const entry of data) {
@@ -80,10 +82,7 @@ const SearchBar = () => {
         console.log(extractedStems);
       }
 
-      // Join the definitions into a single string
       const joinedDefinitions = definitions.join(', ');
-
-      // Update the definition state
       setDefinition(joinedDefinitions);
 
     } catch (error) {
@@ -93,25 +92,6 @@ const SearchBar = () => {
 
   const handleSearch = async () => {
     try {
-      const searchApiUrl = '/api/alriyadh/search';
-
-      const response = await axios.get(searchApiUrl, {
-        headers,
-        params: {
-          query: searchQuery
-        }
-      });
-
-      const searchData = response.data;
-
-      console.log('Search Data:', searchData);
-
-      // Now, let's call the funRequest function
-      const processedData = funRequest(response);
-
-      console.log('Processed Data:', processedData);
-
-      // Finally, call the searchWord function with the search query
       searchWord(searchQuery);
     } catch (error) {
       console.error('Error during search:', error);
@@ -128,6 +108,7 @@ const SearchBar = () => {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <Search className="search-icon" onClick={handleSearch} />
+      
     </div>
   );
 };
